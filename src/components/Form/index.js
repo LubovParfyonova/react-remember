@@ -8,29 +8,31 @@ class Form extends React.Component {
             inputName: ''
         }
     }
-    showInputName = (event) => {
+    handleSubmit = (event) => {
+        event.preventDefault()
+    }
+    getInputName = (event) => {
 
         this.setState({
             inputName: event.target.value
         });
-        console.log(`Здравствуйте, ${this.state.inputName}`);
-         
+        this.showGreeting();
     }
     showGreeting = () =>{
-        return `Здравствуйте, ${this.state.inputName}`  
-            
+       
+        return `Здравствуйте, ${this.state.inputName}` 
+
+       
     }
 
     render() {
         return (
             
-            <form>
-                <input type='text' value={this.state.inputName} onChange={this.showInputName} >
+            <form onSubmit={this.handleSubmit}>
+                <input type='text' placeholder='Введите Ваше имя' value={this.state.inputName} onChange={this.getInputName} >
                 </input>
-                <button type='submit' onChange={this.showGreeting}>Отправить</button>
+                <button type='submit' onClick={this.getInputName}>Отправить</button>
             </form>  
-            
-
         )
     }
 }

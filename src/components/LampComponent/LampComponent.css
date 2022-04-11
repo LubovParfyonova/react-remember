@@ -1,0 +1,13 @@
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid yellow;
+   
+}
+.on{
+   background-color: yellow;  
+}
+.off {
+    background-color: none;
+}

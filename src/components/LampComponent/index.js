@@ -12,15 +12,16 @@ class LampComponent extends React.Component{
 
     toggle = () => {
         this.setState({
-            enabled: this.enabled ? 'on' : 'off'
+            enabled: !this.state.enabled 
         })
     }
+
     render () {
         return (
             <>
-                <div className='circle'>
+                <div className={this.state.enabled ? 'circle-on' : 'circle-off'}>
                 </div>
-                <button  onClick={this.toggle}>
+                <button onClick={this.toggle}>
                     Toggle
                 </button>
             </>

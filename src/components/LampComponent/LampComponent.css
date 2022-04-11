@@ -1,13 +1,15 @@
-.circle {
+.circle-on {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 2px solid yellow;
-   
+    background-color: yellow;
 }
-.on{
-   background-color: yellow;  
-}
-.off {
+
+.circle-off {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid yellow;
     background-color: none;
 }
